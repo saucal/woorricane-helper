@@ -85,6 +85,8 @@ final class Main {
 		// Common includes.
 		Block::hooks();
 
+		WooCommerce\DummyGateway::hooks();
+
 		Customizations\WooCommerce::hooks();
 
 		// Set up localisation.
