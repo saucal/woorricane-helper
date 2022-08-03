@@ -6,7 +6,7 @@
  * @version     1.0.0
  */
 
-namespace WoorricaneHelper\Customizations;
+namespace WoorricaneHelper\WooCommerce;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * WooCommerce Class.
  */
-class WooCommerce {
+class RaceConditionDebug {
 
 	/**
 	 * Hook in methods.

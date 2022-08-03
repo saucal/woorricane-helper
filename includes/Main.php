@@ -87,7 +87,7 @@ final class Main {
 
 		WooCommerce\DummyGateway::hooks();
 
-		Customizations\WooCommerce::hooks();
+		WooCommerce\RaceConditionDebug::hooks();
 
 		// Set up localisation.
 		self::load_plugin_textdomain();
