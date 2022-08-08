@@ -87,6 +87,7 @@ final class Main {
 		Control::hooks();
 
 		WooCommerce\DummyGateway::hooks();
+		WooCommerce\Locks::hooks();
 
 		WooCommerce\RaceConditionDebug::hooks();
 
