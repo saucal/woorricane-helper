@@ -84,6 +84,7 @@ final class Main {
 
 		// Common includes.
 		Block::hooks();
+		Control::hooks();
 
 		WooCommerce\DummyGateway::hooks();
 
