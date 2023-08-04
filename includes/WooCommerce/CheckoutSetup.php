@@ -25,6 +25,18 @@ class CheckoutSetup {
 	public static function hooks() {
 		add_action( 'woorricane_control_cleanup', array( __CLASS__, 'cleanup' ) );
 		add_action( 'woorricane_control_prepare_product', array( __CLASS__, 'prepare_product' ) );
+		add_action( 'woocommerce_checkout_order_created', array( __CLASS__, 'record_server_ip' ), 10, 1 );
+	}
+
+	/**
+	 * Record server IP
+	 *
+	 * @param \WC_Order $order Order object.
+	 * @return void
+	 */
+	public static function record_server_ip( $order ) {
+		$order->add_meta_data( 'serverip', $_SERVER['SERVER_ADDR'] );
+		$order->save();
 	}
 
 	/**
