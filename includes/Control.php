@@ -40,6 +40,7 @@ class Control {
 			return;
 		}
 
+		\nocache_headers();
 		do_action( 'woorricane_control_' . $_REQUEST['action'] );
 		exit;
 	}
