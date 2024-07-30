@@ -74,16 +74,7 @@ final class Main {
 
 		register_activation_hook( PLUGIN_FILE, array( Install::class, 'install' ) );
 
-		if ( Utils::is_request( 'admin' ) ) {
-			Admin::hooks();
-		}
-
-		if ( Utils::is_request( 'frontend' ) ) {
-			Front::hooks();
-		}
-
 		// Common includes.
-		Block::hooks();
 		Control::hooks();
 
 		WooCommerce\DummyGateway::hooks();
