@@ -77,6 +77,8 @@ final class Main {
 		// Common includes.
 		Control::hooks();
 
+		DisableEmails::hooks();
+
 		WooCommerce\DummyGateway::hooks();
 		// WooCommerce\Locks::hooks();
 		WooCommerce\CheckoutSetup::hooks();
