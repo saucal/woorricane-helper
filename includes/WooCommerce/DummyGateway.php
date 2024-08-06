@@ -7,6 +7,8 @@
 
 namespace WoorricaneHelper\WooCommerce;
 
+use WC_Customer;
+
 /**
  * Dummy Gateway Class
  */
@@ -60,6 +62,16 @@ class DummyGateway extends \WC_Payment_Gateway {
 	public function process_payment( $order_id ) {
 
 		$order = wc_get_order( $order_id );
+
+		$order->update_meta_data( 'woorricane_generated', $order_id );
+
+		$customer_id = $order->get_customer_id();
+
+		if ( $customer_id !== 0 ) {
+			$customer = new WC_Customer( $customer_id );
+			$customer->update_meta_data( 'woorricane_generated', $order_id );
+			$customer->save();
+		}
 
 		$order->payment_complete();
 
