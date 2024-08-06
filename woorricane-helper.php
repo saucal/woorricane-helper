@@ -15,7 +15,7 @@
  * Plugin Name: Woorricane - Helper
  * Plugin URI:  https://saucal.com/
  * Description: This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      SAU/CAL
  * Author URI:  https://saucal.com/
  * License:     GPL-2.0+
